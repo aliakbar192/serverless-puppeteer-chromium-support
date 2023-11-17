@@ -1,0 +1,19 @@
+service: html-to-pdf
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: final-stage
+  region: eu-north-1
+
+plugins:
+  - serverless-offline
+functions:
+  pdf:
+    handler: pdf.pdf
+    layers:
+      - arn:aws:lambda:eu-north-1:764866452798:layer:chrome-aws-lambda:38
+    events:
+      - http:
+          path: pdf
+          method: post
+          cors: true

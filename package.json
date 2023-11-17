@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1472.0",
+    "pug": "^2.0.4",
+    "puppeteer-core": "^2.0.0",
+    "serverless-apigw-binary": "^0.4.4"
+  },
+  "devDependencies": {
+    "serverless-offline": "^13.2.0"
+  }
+}
